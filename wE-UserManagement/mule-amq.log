@@ -1,0 +1,726 @@
+2016-03-22 14:44:11,154 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 15704 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 14:44:11,155 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 14:44:11,281 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f6b0be5: startup date [Tue Mar 22 14:44:11 NZDT 2016]; root of context hierarchy
+2016-03-22 14:44:13,876 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 14:44:21,148 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 14:44:21,156 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 14:44:21,238 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@5c059a68: startup date [Tue Mar 22 14:44:21 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3f6b0be5
+2016-03-22 14:44:21,627 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 14:44:21,855 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1a1c21b4: startup date [Tue Mar 22 14:44:21 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@5c059a68
+2016-03-22 14:44:22,995 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 14:44:23,695 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 14:44:23,782 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 14:44:23,786 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 14:44:23,786 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4afcae7
+2016-03-22 14:44:23,803 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 14:44:23,827 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 14:44:23,840 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 14:44:24,089 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 14:44:24,091 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 14:44:24,091 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 14:44:24,631 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=7dd3981e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:44:24,631 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=7dd3981e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:44:24,631 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 14:44:24,634 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 14:44:24,635 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 14:44:24,636 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 14:44:24,641 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 14:44:24,652 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 14:44:24,653 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 14:44:24,658 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:44:24,660 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 14:44:24,819 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 14:44:24,819 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:44:24,819 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 14:44:24,837 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 14:44:24,844 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 14:44:24,885 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.994fca00-efcf-11e5-81e1-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:44:24,885 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.994fca00-efcf-11e5-81e1-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:44:24,886 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.994fca00-efcf-11e5-81e1-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 14:44:24,909 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 2:44 PM                                    *
+* Server ID: 994fca00-efcf-11e5-81e1-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 14:44:24,911 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 14.219 seconds (JVM running for 16.899)
+2016-03-22 14:44:39,873 [mule-amqFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Enter some text here for the message body...
+2016-03-22 14:46:44,543 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 8156 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 14:46:44,544 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 14:46:44,617 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f6b0be5: startup date [Tue Mar 22 14:46:44 NZDT 2016]; root of context hierarchy
+2016-03-22 14:46:46,833 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 14:46:49,754 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 14:46:49,761 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 14:46:49,815 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@5c059a68: startup date [Tue Mar 22 14:46:49 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3f6b0be5
+2016-03-22 14:46:50,050 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 14:46:50,254 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1a1c21b4: startup date [Tue Mar 22 14:46:50 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@5c059a68
+2016-03-22 14:46:51,016 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 14:46:51,626 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 14:46:51,663 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 14:46:51,666 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 14:46:51,667 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4afcae7
+2016-03-22 14:46:51,679 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 14:46:51,698 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 14:46:51,735 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 14:46:51,907 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 14:46:51,909 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 14:46:51,909 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 14:46:52,228 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=7dd3981e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:46:52,228 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=7dd3981e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:46:52,229 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 14:46:52,231 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 14:46:52,233 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 14:46:52,234 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 14:46:52,239 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 14:46:52,249 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 14:46:52,250 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 14:46:52,255 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:46:52,257 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 14:46:52,340 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 14:46:52,340 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:46:52,340 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 14:46:52,355 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 14:46:52,363 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 14:46:52,388 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.f1dd0250-efcf-11e5-a78f-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:46:52,388 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.f1dd0250-efcf-11e5-a78f-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:46:52,390 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.f1dd0250-efcf-11e5-a78f-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 14:46:52,399 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 2:46 PM                                    *
+* Server ID: f1dd0250-efcf-11e5-a78f-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 14:46:52,401 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 8.251 seconds (JVM running for 9.132)
+2016-03-22 14:47:17,630 [mule-amqFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Enter some text here for the message body...
+2016-03-22 14:55:49,526 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 10432 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 14:55:49,527 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 14:55:49,631 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@16610890: startup date [Tue Mar 22 14:55:49 NZDT 2016]; root of context hierarchy
+2016-03-22 14:55:52,753 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 14:55:58,488 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 14:55:58,510 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 14:55:58,628 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@4d464510: startup date [Tue Mar 22 14:55:58 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@16610890
+2016-03-22 14:55:59,255 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 14:55:59,773 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1bd8afc8: startup date [Tue Mar 22 14:55:59 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@4d464510
+2016-03-22 14:56:05,085 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 14:56:06,170 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 14:56:06,269 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 14:56:06,272 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 14:56:06,272 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@20dd5870
+2016-03-22 14:56:06,324 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 14:56:06,425 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 14:56:06,484 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 14:56:07,059 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 14:56:07,061 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 14:56:07,061 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 14:56:08,252 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=481ed95c
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:56:08,252 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=481ed95c
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:56:08,253 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 14:56:08,255 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 14:56:08,256 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 14:56:08,256 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 14:56:08,261 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 14:56:08,361 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 14:56:08,362 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 14:56:08,366 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:56:08,368 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 14:56:08,502 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 14:56:08,503 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:56:08,503 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 14:56:08,549 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 14:56:08,553 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 14:56:08,598 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.390c9f40-efd1-11e5-8588-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:56:08,598 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.390c9f40-efd1-11e5-8588-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:56:08,600 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.390c9f40-efd1-11e5-8588-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 14:56:08,618 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 2:56 PM                                    *
+* Server ID: 390c9f40-efd1-11e5-8588-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 14:56:08,620 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 19.726 seconds (JVM running for 20.94)
+2016-03-22 14:56:24,697 [mule-amqFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Enter some text here for the message body...
+2016-03-22 14:59:27,684 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 560 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 14:59:27,685 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 14:59:27,771 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@16610890: startup date [Tue Mar 22 14:59:27 NZDT 2016]; root of context hierarchy
+2016-03-22 14:59:30,638 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 14:59:37,884 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 14:59:37,931 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 14:59:38,050 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@37a9b687: startup date [Tue Mar 22 14:59:38 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@16610890
+2016-03-22 14:59:38,731 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 14:59:39,216 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2ca3d826: startup date [Tue Mar 22 14:59:39 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@37a9b687
+2016-03-22 14:59:42,480 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 14:59:45,153 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 14:59:45,278 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 14:59:45,281 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 14:59:45,281 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1cc708a7
+2016-03-22 14:59:45,321 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 14:59:45,412 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 14:59:45,455 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 14:59:45,880 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 14:59:45,881 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 14:59:45,882 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 14:59:46,430 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=f4f843f
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:59:46,431 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=f4f843f
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 14:59:46,431 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 14:59:46,434 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 14:59:46,435 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 14:59:46,436 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 14:59:46,441 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 14:59:46,470 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 14:59:46,471 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 14:59:46,476 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:59:46,478 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 14:59:46,606 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 14:59:46,606 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 14:59:46,606 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 14:59:46,654 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 14:59:46,658 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 14:59:46,720 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.bbde2790-efd1-11e5-9bf7-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:59:46,720 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.bbde2790-efd1-11e5-9bf7-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 14:59:46,721 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.bbde2790-efd1-11e5-9bf7-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 14:59:46,750 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 2:59 PM                                    *
+* Server ID: bbde2790-efd1-11e5-9bf7-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 14:59:46,752 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 19.655 seconds (JVM running for 21.199)
+2016-03-22 15:00:05,242 [mule-amqFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Current payload is Enter some text here for the message body... and message id is cb4554b0-efd1-11e5-9bf7-a01d48abaccc
+2016-03-22 15:09:44,308 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 15188 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 15:09:44,309 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 15:09:44,400 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@16610890: startup date [Tue Mar 22 15:09:44 NZDT 2016]; root of context hierarchy
+2016-03-22 15:09:48,492 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 15:09:59,090 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 15:09:59,114 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 15:09:59,233 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@77724cbe: startup date [Tue Mar 22 15:09:59 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@16610890
+2016-03-22 15:09:59,793 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 15:10:00,299 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@77a0dd63: startup date [Tue Mar 22 15:10:00 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@77724cbe
+2016-03-22 15:10:02,471 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 15:10:03,461 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 15:10:03,606 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 15:10:03,609 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 15:10:03,609 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4d4b019e
+2016-03-22 15:10:03,648 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 15:10:03,740 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 15:10:03,798 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 15:10:04,341 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 15:10:04,343 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 15:10:04,343 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 15:10:05,033 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=118cbded
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:10:05,033 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=118cbded
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:10:05,034 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 15:10:05,036 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 15:10:05,038 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 15:10:05,039 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 15:10:05,045 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 15:10:05,164 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 15:10:05,165 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 15:10:05,170 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:10:05,172 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 15:10:05,446 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 15:10:05,447 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:10:05,447 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 15:10:05,506 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 15:10:05,512 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 15:10:05,590 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.2e1675f0-efd3-11e5-a663-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:10:05,590 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.2e1675f0-efd3-11e5-a663-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:10:05,592 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.2e1675f0-efd3-11e5-a663-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 15:10:05,645 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 3:10 PM                                    *
+* Server ID: 2e1675f0-efd3-11e5-a663-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 15:10:05,646 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 22.019 seconds (JVM running for 22.866)
+2016-03-22 15:10:14,407 [mule-amqFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Current payload is Enter some text here for the message body... and message id is 36afb190-efd3-11e5-a663-a01d48abaccc
+2016-03-22 15:12:47,199 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 10292 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 15:12:47,199 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 15:12:47,374 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4d0f2471: startup date [Tue Mar 22 15:12:47 NZDT 2016]; root of context hierarchy
+2016-03-22 15:12:51,595 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 15:12:56,607 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 15:12:56,633 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 15:12:56,779 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@459003a0: startup date [Tue Mar 22 15:12:56 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4d0f2471
+2016-03-22 15:12:57,455 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 15:12:58,051 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@5438fa43: startup date [Tue Mar 22 15:12:58 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@459003a0
+2016-03-22 15:12:59,679 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 15:13:00,641 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 15:13:00,747 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 15:13:00,750 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 15:13:00,750 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3dbb3fb7
+2016-03-22 15:13:00,835 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 15:13:00,958 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 15:13:00,997 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 15:13:01,383 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 15:13:01,385 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 15:13:01,385 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 15:13:02,046 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=e521067
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:13:02,046 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=e521067
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:13:02,047 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 15:13:02,049 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 15:13:02,051 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 15:13:02,052 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 15:13:02,056 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 15:13:02,102 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 15:13:02,103 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 15:13:02,106 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:13:02,107 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 15:13:02,382 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 15:13:02,383 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:13:02,383 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 15:13:02,430 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 15:13:02,440 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 15:13:02,492 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.97ef04b0-efd3-11e5-8f08-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:13:02,493 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.97ef04b0-efd3-11e5-8f08-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:13:02,494 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.97ef04b0-efd3-11e5-8f08-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 15:13:02,520 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 3:13 PM                                    *
+* Server ID: 97ef04b0-efd3-11e5-8f08-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 15:13:02,522 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 16.638 seconds (JVM running for 18.833)
+2016-03-22 15:13:15,757 [mule-amqFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Current payload is Enter some text here for the message body... and message id is a29e2800-efd3-11e5-8f08-a01d48abaccc
+2016-03-22 15:14:34,939 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 7132 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 15:14:34,939 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 15:14:35,059 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@32ee6fee: startup date [Tue Mar 22 15:14:35 NZDT 2016]; root of context hierarchy
+2016-03-22 15:14:37,236 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 15:14:41,487 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 15:14:41,494 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 15:14:41,546 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@1d4f5506: startup date [Tue Mar 22 15:14:41 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@32ee6fee
+2016-03-22 15:14:41,913 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 15:14:42,141 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@5a9840f3: startup date [Tue Mar 22 15:14:42 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@1d4f5506
+2016-03-22 15:14:43,325 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 15:14:44,136 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 15:14:44,241 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 15:14:44,245 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 15:14:44,245 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@c6a692e
+2016-03-22 15:14:44,294 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 15:14:44,352 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 15:14:44,400 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 15:14:44,664 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 15:14:44,665 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 15:14:44,665 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 15:14:46,220 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=1d637673
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:14:46,221 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=1d637673
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:14:46,221 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 15:14:46,224 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 15:14:46,225 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 15:14:46,226 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 15:14:46,231 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 15:14:46,287 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 15:14:46,288 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 15:14:46,292 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:14:46,294 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 15:14:46,989 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 15:14:46,990 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:14:46,990 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 15:14:47,056 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 15:14:47,070 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 15:14:47,132 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.d648eeb0-efd3-11e5-b7c7-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:14:47,132 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.d648eeb0-efd3-11e5-b7c7-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:14:47,134 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.d648eeb0-efd3-11e5-b7c7-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 15:14:47,201 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 3:14 PM                                    *
+* Server ID: d648eeb0-efd3-11e5-b7c7-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 15:14:47,202 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 12.705 seconds (JVM running for 13.554)
+2016-03-22 15:30:46,432 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 13948 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 15:30:46,433 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 15:30:46,509 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@53fdffa1: startup date [Tue Mar 22 15:30:46 NZDT 2016]; root of context hierarchy
+2016-03-22 15:30:49,000 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 15:30:52,172 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 15:30:52,180 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 15:30:52,244 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@64e7d698: startup date [Tue Mar 22 15:30:52 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@53fdffa1
+2016-03-22 15:30:52,586 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 15:30:52,853 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@24134cbc: startup date [Tue Mar 22 15:30:52 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@64e7d698
+2016-03-22 15:30:53,808 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 15:30:54,393 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 15:30:54,494 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 15:30:54,498 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 15:30:54,498 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1640f20f
+2016-03-22 15:30:54,516 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 15:30:54,544 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 15:30:54,558 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 15:30:54,793 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 15:30:54,796 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 15:30:54,796 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 15:30:55,131 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=40cf6254
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:30:55,131 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=40cf6254
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:30:55,131 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 15:30:55,134 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 15:30:55,136 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 15:30:55,137 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 15:30:55,143 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 15:30:55,155 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 15:30:55,157 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 15:30:55,162 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:30:55,164 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 15:30:55,376 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 15:30:55,376 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:30:55,376 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 15:30:55,397 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 15:30:55,404 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 15:30:55,454 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.18e24530-efd6-11e5-88b3-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:30:55,454 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.18e24530-efd6-11e5-88b3-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:30:55,456 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.18e24530-efd6-11e5-88b3-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 15:30:55,463 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 3:30 PM                                    *
+* Server ID: 18e24530-efd6-11e5-88b3-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 15:30:55,465 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 9.549 seconds (JVM running for 10.688)
+2016-03-22 15:35:38,614 [main] INFO  com.wentity.usermanagement.UserManagementApp - Starting UserManagementApp on Zaid with PID 13140 (C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\target\classes started by HP in C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement)
+2016-03-22 15:35:38,615 [main] INFO  com.wentity.usermanagement.UserManagementApp - No active profile set, falling back to default profiles: default
+2016-03-22 15:35:38,705 [main] INFO  org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@383bfa16: startup date [Tue Mar 22 15:35:38 NZDT 2016]; root of context hierarchy
+2016-03-22 15:35:41,299 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-03-22 15:35:44,273 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-03-22 15:35:44,315 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2016-03-22 15:35:44,559 [main] INFO  org.springframework.context.support.StaticApplicationContext - Refreshing org.springframework.context.support.StaticApplicationContext@6c977dcf: startup date [Tue Mar 22 15:35:44 NZDT 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@383bfa16
+2016-03-22 15:35:45,015 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2016-03-22 15:35:45,332 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51ac12ac: startup date [Tue Mar 22 15:35:45 NZDT 2016]; parent: org.springframework.context.support.StaticApplicationContext@6c977dcf
+2016-03-22 15:35:46,793 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-22 15:35:48,023 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2016-03-22 15:35:48,129 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2016-03-22 15:35:48,132 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: mule-amqFlow
+2016-03-22 15:35:48,132 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@27438750
+2016-03-22 15:35:48,170 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: mule-amqFlow.stage1
+2016-03-22 15:35:48,285 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-tx-log\tx2.log
+2016-03-22 15:35:48,321 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx1.log and C:\Users\HP\Documents\NetBeansProjects\Movers\UserManagement\.\.mule\queue-xa-tx-log\tx2.log
+2016-03-22 15:35:48,708 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-config.xml'}]"
+2016-03-22 15:35:48,710 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2016-03-22 15:35:48,710 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2016-03-22 15:35:49,314 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=543b0737
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:35:49,315 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=543b0737
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2016-03-22 15:35:49,315 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2016-03-22 15:35:49,317 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2016-03-22 15:35:49,318 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: mule-amqFlow
+2016-03-22 15:35:49,319 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: mule-amqFlow.stage1
+2016-03-22 15:35:49,324 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: mule-amqFlow on endpointUri: jms://UsersManager.Create
+2016-03-22 15:35:49,354 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2016-03-22 15:35:49,355 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2016-03-22 15:35:49,360 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:35:49,362 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2016-03-22 15:35:49,508 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://UsersManager.Create has been successfully reconnected.
+2016-03-22 15:35:49,508 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2016-03-22 15:35:49,508 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2016-03-22 15:35:49,682 [main] INFO  org.mule.config.processors.DecoratingAnnotatedServiceProcessor - org.mule.config.AnnotationsParserFactory implementation not found in registry, annotations not enabled
+2016-03-22 15:35:49,689 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2016-03-22 15:35:49,782 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c72070e0-efd6-11e5-b504-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:35:49,782 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c72070e0-efd6-11e5-b504-a01d48abaccc:type=Endpoint,service="mule-amqFlow",connector=Active_MQ,name="endpoint.jms.UsersManager.Create"
+2016-03-22 15:35:49,784 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c72070e0-efd6-11e5-b504-a01d48abaccc:type=Connector,name="Active.MQ"
+2016-03-22 15:35:49,822 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.7.2 Build: e6f2bb64                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 3/22/16 3:35 PM                                    *
+* Server ID: c72070e0-efd6-11e5-b504-a01d48abaccc                    *
+* JDK: 1.8.0_11 (mixed mode)                                         *
+* OS encoding: Cp1252, Mule encoding: UTF-8                          *
+* OS: Windows 8 -  (6.2, amd64)                                      *
+* Host: Zaid (192.168.20.3)                                          *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2016-03-22 15:35:49,823 [main] INFO  com.wentity.usermanagement.UserManagementApp - Started UserManagementApp in 11.62 seconds (JVM running for 12.496)

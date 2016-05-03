@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    
+    <spring:beans>
+        <spring:bean name="beanUserListner" class="com.wentity.usermanagement.jms.UserListener"/>
+    </spring:beans>
+    
+    
+    <jms:activemq-connector name="Active_MQ" username="admin" password="admin" brokerURL="tcp://localhost:61616" validateConnections="true" doc:name="Active MQ"/>
+    
+  
+    <flow name="countFlow">
+        <jms:inbound-endpoint queue="UserManager.Notification" connector-ref="Active_MQ" doc:name="JMSOUTLIST">
+            <jms:selector expression="msgFilter = 'countInfo'"/>
+        </jms:inbound-endpoint>        
+        <logger message="Current payload is #[payload] and message id is #[message.id]" level="INFO" doc:name="Logger"/>
+        <invoke object-ref="beanUserListner"  method="countEntity" doc:name="ft"/>
+        <jms:outbound-endpoint queue="UserManager.Operation" connector-ref="Active_MQ" doc:name="JMSOUT">            
+            <message-properties-transformer>
+                <add-message-property key="msgFilter" value="countEntity" />
+            </message-properties-transformer>
+        </jms:outbound-endpoint>       
+    </flow>
+    
+    <flow name="removeFlow">
+        <jms:inbound-endpoint queue="UserManager.Operation" connector-ref="Active_MQ" doc:name="JMSOUTLIST">
+            <jms:selector expression="msgFilter = 'deleteEntity'"/>
+        </jms:inbound-endpoint>        
+        <logger message="Current payload is #[payload] and message id is #[message.id]" level="INFO" doc:name="Logger"/>
+        <invoke object-ref="beanUserListner"  method="deleteEntity" methodArguments="#[payload]"  doc:name="ft"/>
+        <jms:outbound-endpoint queue="UserManager.Notification" connector-ref="Active_MQ" doc:name="JMSOUT">            
+            <message-properties-transformer>
+                <add-message-property key="msgFilter" value="deleteEntityInfo" />
+            </message-properties-transformer>
+        </jms:outbound-endpoint>       
+    </flow>
+    
+    <flow name="findSingleFlow">
+        <jms:inbound-endpoint queue="UserManager.Notification" connector-ref="Active_MQ" doc:name="JMSOUTLIST">
+            <jms:selector expression="msgFilter = 'findSingleInfo'"/>
+        </jms:inbound-endpoint>        
+        <logger message="Current payload is #[payload] and message id is #[message.id]" level="INFO" doc:name="Logger"/>
+        <invoke object-ref="beanUserListner"  method="findSingle" methodArguments="#[payload]" doc:name="ft"/>
+        <json:object-to-json-transformer returnClass="java.lang.String" doc:name="Object to JSON"/>
+        <jms:outbound-endpoint queue="UserManager.Operation" connector-ref="Active_MQ" doc:name="JMSOUT">            
+            <message-properties-transformer>
+                <add-message-property key="msgFilter" value="findSingleEntity" />
+            </message-properties-transformer>
+        </jms:outbound-endpoint>       
+    </flow>
+    
+    
+    <flow name="createEntityFlow">
+        <jms:inbound-endpoint queue="UserManager.Operation" connector-ref="Active_MQ" doc:name="JMSUSERCREATE">
+            <jms:selector expression="msgFilter = 'createEntity'"/>
+        </jms:inbound-endpoint>
+        <logger message="Current payload is #[payload] and message id is #[message.id]" level="INFO" doc:name="Logger"/>        
+        <json:json-to-object-transformer returnClass="com.wentity.usermanagement.domain.Users" doc:name="JSON to Object"/>
+        <echo-component doc:name="Echo"/>            
+        <invoke object-ref="beanUserListner" method="registerUser" methodArguments="#[payload]" methodArgumentTypes="com.wentity.usermanagement.domain.Users" doc:name="Invoke"/>
+    </flow>
+    <flow name="editEntityFlow">
+        <jms:inbound-endpoint queue="UserManager.Operation" connector-ref="Active_MQ" doc:name="JMSUSERCREATE">
+            <jms:selector expression="msgFilter = 'editEntity'"/>
+        </jms:inbound-endpoint>
+        <logger message="Current payload is #[payload] and message id is #[message.id]" level="INFO" doc:name="Logger"/>        
+        <json:json-to-object-transformer returnClass="com.wentity.usermanagement.domain.Users" doc:name="JSON to Object"/>
+        <echo-component doc:name="Echo"/>                  
+        <invoke object-ref="beanUserListner" method="editUser" methodArguments="#[payload]"  doc:name="InvokeEdit"/>
+        <jms:outbound-endpoint queue="UserManager.Notification" connector-ref="Active_MQ" doc:name="JMSOUT">            
+            <message-properties-transformer>
+                <add-message-property key="msgFilter" value="editEntityInfo" />
+            </message-properties-transformer>
+        </jms:outbound-endpoint>
+    </flow>
+    
+    <flow name="findRangeFlow">
+        <jms:inbound-endpoint queue="UserManager.Notification" connector-ref="Active_MQ" doc:name="JMSIN">
+            <jms:selector expression="msgFilter = 'findRangeInfo'"/>
+        </jms:inbound-endpoint>        
+        <logger message="Current payload is #[payload] and message id is #[message.id]" level="INFO" doc:name="Logger"/>
+        <json:json-to-object-transformer  returnClass="java.lang.Integer[]" doc:name="JSON to Object"/>        
+        <invoke object-ref="beanUserListner"  method="findRange" methodArguments="#[payload]"  doc:name="ft"/>
+        <json:object-to-json-transformer returnClass="java.lang.String" doc:name="Object to JSON"/>
+        <echo-component doc:name="Echo"/>
+        <jms:outbound-endpoint queue="UserManager.Operation" connector-ref="Active_MQ" doc:name="JMSOUT">            
+            <message-properties-transformer>
+                <add-message-property key="msgFilter" value="findRangeList" />
+            </message-properties-transformer>
+        </jms:outbound-endpoint>        
+    </flow>
+    
+     <flow name="findAllFlow">
+        <jms:inbound-endpoint queue="UserManager.Notification" connector-ref="Active_MQ" doc:name="JMSIN">
+            <jms:selector expression="msgFilter = 'findAllInfo'"/>
+        </jms:inbound-endpoint> 
+        <invoke object-ref="beanUserListner"  method="findAll" doc:name="ft"/>
+        <json:object-to-json-transformer returnClass="java.lang.String" doc:name="Object to JSON"/>
+        <jms:outbound-endpoint queue="UserManager.Operation" connector-ref="Active_MQ" doc:name="JMSOUT">            
+            <message-properties-transformer>
+                <add-message-property key="msgFilter" value="findAllEntity" />
+            </message-properties-transformer>
+        </jms:outbound-endpoint>        
+    </flow>    
+</mule>

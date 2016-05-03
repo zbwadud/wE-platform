@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewUserHasUserRoleTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewUserHasUserRoleLabel_createdByUserID}"/>
+                    <h:outputText value="#{userHasUserRoleController.selected.createdByUserID}" title="#{bundle.ViewUserHasUserRoleTitle_createdByUserID}"/>
+                    <h:outputText value="#{bundle.ViewUserHasUserRoleLabel_createdDate}"/>
+                    <h:outputText value="#{userHasUserRoleController.selected.createdDate}" title="#{bundle.ViewUserHasUserRoleTitle_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewUserHasUserRoleLabel_userRole}"/>
+                    <h:outputText value="#{userHasUserRoleController.selected.userRole}" title="#{bundle.ViewUserHasUserRoleTitle_userRole}"/>
+                    <h:outputText value="#{bundle.ViewUserHasUserRoleLabel_users}"/>
+                    <h:outputText value="#{userHasUserRoleController.selected.users}" title="#{bundle.ViewUserHasUserRoleTitle_users}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{userHasUserRoleController.destroyAndView}" value="#{bundle.ViewUserHasUserRoleDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewUserHasUserRoleEditLink}"/>
+                <br />
+                <h:commandLink action="#{userHasUserRoleController.prepareCreate}" value="#{bundle.ViewUserHasUserRoleCreateLink}" />
+                <br />
+                <h:commandLink action="#{userHasUserRoleController.prepareList}" value="#{bundle.ViewUserHasUserRoleShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewUserHasUserRoleIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

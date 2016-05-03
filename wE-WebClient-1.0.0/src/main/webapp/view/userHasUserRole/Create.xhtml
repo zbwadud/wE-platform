@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateUserHasUserRoleTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateUserHasUserRoleLabel_createdByUserID}" for="createdByUserID" />
+                    <h:inputText id="createdByUserID" value="#{userHasUserRoleController.selected.createdByUserID}" title="#{bundle.CreateUserHasUserRoleTitle_createdByUserID}" required="true" requiredMessage="#{bundle.CreateUserHasUserRoleRequiredMessage_createdByUserID}"/>
+                    <h:outputLabel value="#{bundle.CreateUserHasUserRoleLabel_createdDate}" for="createdDate" />
+                    <h:inputText id="createdDate" value="#{userHasUserRoleController.selected.createdDate}" title="#{bundle.CreateUserHasUserRoleTitle_createdDate}" required="true" requiredMessage="#{bundle.CreateUserHasUserRoleRequiredMessage_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateUserHasUserRoleLabel_userRole}" for="userRole" />
+                    <h:selectOneMenu id="userRole" value="#{userHasUserRoleController.selected.userRole}" title="#{bundle.CreateUserHasUserRoleTitle_userRole}" required="true" requiredMessage="#{bundle.CreateUserHasUserRoleRequiredMessage_userRole}">
+                        <f:selectItems value="#{userRoleController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateUserHasUserRoleLabel_users}" for="users" />
+                    <h:selectOneMenu id="users" value="#{userHasUserRoleController.selected.users}" title="#{bundle.CreateUserHasUserRoleTitle_users}" required="true" requiredMessage="#{bundle.CreateUserHasUserRoleRequiredMessage_users}">
+                        <f:selectItems value="#{usersController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{userHasUserRoleController.create}" value="#{bundle.CreateUserHasUserRoleSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{userHasUserRoleController.prepareList}" value="#{bundle.CreateUserHasUserRoleShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateUserHasUserRoleIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

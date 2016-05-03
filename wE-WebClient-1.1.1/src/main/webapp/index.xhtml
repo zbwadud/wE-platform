@@ -1,0 +1,56 @@
+<!DOCTYPE html [
+<!ENTITY nbsp "&#160;">  
+<!ENTITY copy "&#169;"> 
+<!ENTITY bull "&#8226;"> ]>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    
+    <h:head>
+        <title></title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <h:outputStylesheet name="assets/css/main.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    </h:head>
+
+<body class="loading">
+		<div id="wrapper">
+			<div id="bg"> </div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Zaid Wadud</h1>
+						<p>Never asked for this</p>
+						<nav>
+							<ul>
+                                                            <li><h:link outcome="/user/login" class="icon fa-sign-in" title="Sign In"><span class="label">Login</span></h:link></li>
+                                                            <li><h:link outcome="/register" class="icon fa-registered" title="Register"><span class="label">Register</span></h:link></li>
+                                                            <li><h:link outcome="/administrator/login" class="icon fa-adn" title="Administrator"><span class="label">Administrator</span></h:link></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+                                            <span class="copyright">&copy;&nbsp;<a href="www.wentity.com">wEntity System Limited</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+
+</html>
