@@ -27,7 +27,7 @@ public class ServiceClient {
     private static final Logger log = LoggerFactory.getLogger(ServiceClient.class);
     private WebTarget webTarget;
     private Client client;
-    private static final String BASE_URI = "http://localhost:23485/HTML5/webresources";
+    private static final String BASE_URI = "http://localhost:23485/webclient/webresources";
 
     public ServiceClient() {
         log.info("In webservice client "+BASE_URI);
@@ -43,8 +43,7 @@ public class ServiceClient {
     public int userLogin(Object requestEntity) throws ClientErrorException {
         WebTarget resource = webTarget;
         resource = resource.path("userLogin");
-        Response response = resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).
-                put(Entity.json(requestEntity));
+        Response response = resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).put(Entity.json(requestEntity));
         
         return response.getStatus();
         

@@ -50,6 +50,7 @@ public class UserService {
         log.info("adminRegister");
     }
     */
+    /*
     @GET
     @Path("{email}")
     @Produces({MediaType.TEXT_PLAIN})
@@ -67,4 +68,5 @@ public class UserService {
     
     return true;
     }
+*/
 }

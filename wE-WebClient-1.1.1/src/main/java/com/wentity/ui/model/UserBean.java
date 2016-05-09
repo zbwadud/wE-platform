@@ -9,6 +9,8 @@ import java.io.Serializable;
  *
  * @author Zaid Wadud <Zaid Wadud at wEntity System Ltd.>
  */
+//@ManagedBean(name = "userBean", eager = false)
+//@RequestScoped
 public class UserBean implements Serializable {
     
     private String userName;
