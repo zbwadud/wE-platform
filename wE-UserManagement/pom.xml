@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
     <name>wE :: User Management-1.0.0</name>
     <properties>        
-        <mule.version>3.7.2</mule.version>
+        <mule.version>3.7.0</mule.version>
         <mule.tools.version>1.1</mule.tools.version>
         
     </properties>
@@ -86,37 +86,31 @@
             <groupId>org.mule.transports</groupId>
             <artifactId>mule-transport-jms</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>        
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-client</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-annotations</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.mule.transports</groupId>
             <artifactId>mule-transport-jdbc</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.mule.transports</groupId>
             <artifactId>mule-transport-file</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>        
         <dependency>
             <groupId>org.mule</groupId>
             <artifactId>mule-core</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -132,13 +126,11 @@
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-spring-config</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-cxf</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -150,20 +142,17 @@
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-xml</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-json</artifactId>
             <version>3.7.0</version>
-            <scope>compile</scope>
         </dependency>
     
         <dependency>
             <groupId>org.mule.transports</groupId>
             <artifactId>mule-transport-quartz</artifactId>
             <version>${mule.version}</version>
-            <scope>compile</scope>
         </dependency>
         <!--
         <dependency>
@@ -173,6 +162,7 @@
             <scope>provided</scope>
         </dependency>
         -->
-    </dependencies>        
+    </dependencies>
+    
         
 </project>
