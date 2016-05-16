@@ -4,10 +4,10 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-
-    <ui:composition template="/template.xhtml">
+<f:loadBundle basename="Bundle" var="bundle" />
+    <ui:composition template="/administrator/template.xhtml">
         <ui:define name="page_title">
-            <h:outputText value="Administrator Area"></h:outputText>
+            <h:outputText value="#{bundle.AdIndexPageUsrTitle}"></h:outputText>
         </ui:define>
         <ui:define name="body">
            Admin Profile should be here!!

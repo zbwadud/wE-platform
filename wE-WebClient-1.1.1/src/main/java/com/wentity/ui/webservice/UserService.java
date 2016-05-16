@@ -26,15 +26,15 @@ public class UserService {
     @Path("userLogin")
     @Produces({MediaType.APPLICATION_JSON})
     public String userLogin(UserBean user) {
-        log.info(user.toString());
+        log.info("user login "+user.toString());
         return "success";
     }
     
     @PUT
-    @Path("adminLogin")
+    @Path("backendLogin")
     @Produces({MediaType.APPLICATION_JSON})
-    public String adminLogin(UserBean user) {
-        log.info(user.toString());
+    public String backendLogin(UserBean user) {
+        log.info("backend login "+user.toString());
         return "success";
     }
     

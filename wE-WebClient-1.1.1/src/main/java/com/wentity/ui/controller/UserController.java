@@ -5,7 +5,6 @@ package com.wentity.ui.controller;
 
 import com.wentity.ui.model.UserBean;
 import com.wentity.ui.webservice.ServiceClient;
-import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
@@ -36,22 +35,22 @@ public class UserController implements Serializable {
     }
     public String userLoginSuccess(){
         
-        return "template";
+        return "user";
     }
     
     public String adminLoginSuccess(){
         
-        return "template";
+        return "user";
     }
             
             
-    public String userLogin(){
+    public String userLogin() {
         //userService.create(userBean);
-        log.info("userBean--->"+userBean);
-
+        log.info("userBean--->" + userBean);
         int response = serviceClient.userLogin(userBean);
-       log.info("Service Response :"+response);
+        log.info("userLogin-->Service Response :" + response);
         serviceClient.close();
+        
         return userLoginSuccess();
     }
     
@@ -68,11 +67,17 @@ public class UserController implements Serializable {
         return "";
     }
     
-    public String adminLogin(){
+    public String logout(){
+    
+        return "/index";
+    }
+    
+    public String userBackEndLogin(){
         //userService.create(userBean);
-       //int response = serviceClient.login(userBean);
-       //log.info("Service Response :"+response);
-        //serviceClient.close();
+       log.info("userBean--->" + userBean);
+       int response = serviceClient.backendLogin(userBean);
+       log.info("userBackEndLogin --> Service Response :"+response);
+        serviceClient.close();
         return adminLoginSuccess();
     }
     
